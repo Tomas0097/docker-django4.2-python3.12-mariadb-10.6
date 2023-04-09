@@ -1,11 +1,15 @@
 ### Usage
-- Install Docker
-- Clone repository to local
-- Move in root folder of the project
-- Rename text occurrences variables: "project-name" and "project_name" in the whole project according to the name of your project
-- Build / Pull all images in /dev folder
-- Run Make scripts in the following order:
-  - `make up`
-  - `make prepare_database`
-  - `make migrate`
-  - `create_default_superuser`
+- Install Docker.
+- Clone the repository to your local machine.
+- Navigate to the cloned repository and:
+  - Remove the **.git** file.
+  - Rename the repository folder and all of its containing folders and text occurrences of the variables "project-name" and "project_name" to match the name of your project.
+  - Remove the text in the **README.md** file.
+  - Build/Pull all images in **/dev** folder.
+  - Navigate to the root folder of repository and run the Make scripts in the following order:
+    - `make up`
+    - `make prepare_database`
+    - `make migrate`
+    - `create_default_superuser`
+  - Go to http://127.0.0.1:8088/admin/ and test if the Django app is running.
+- If everything is working correctly, initialize a new Git repository and push it to the remote server.
