@@ -1,0 +1,11 @@
+### Usage
+- Install Docker
+- Clone repository to local
+- Move in root folder of the project
+- Rename text occurrences variables: "project-name" and "project_name" in the whole project according to the name of your project
+- Build / Pull all images in /dev folder
+- Run Make scripts in the following order:
+  - `make up`
+  - `make prepare_database`
+  - `make migrate`
+  - `create_default_superuser`
