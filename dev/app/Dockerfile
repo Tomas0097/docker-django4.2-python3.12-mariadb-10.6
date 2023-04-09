@@ -14,6 +14,4 @@ COPY dev/app/*.sh /
 RUN chmod +x /*.sh
 
 # Run a file script.
-#CMD /docker-start.sh
-
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+CMD /docker-start.sh
