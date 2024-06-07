@@ -10,6 +10,6 @@
     - `make up`
     - `make prepare_database`
     - `make migrate`
-    - `create_default_superuser`
+    - `make create_default_superuser`
   - Go to http://127.0.0.1:8088/admin/ and test if the Django app is running.
 - If everything is working correctly, initialize a new Git repository and push it to the remote server.
