@@ -1,11 +1,10 @@
 version: '2.4'
 
 services:
-
   app:
     container_name: project-name-app
     hostname: project-name-app
-    image: flakooo/myprojects:project-name-app
+    image: project-name-app
     restart: always
     depends_on:
       - db
@@ -17,13 +16,13 @@ services:
       DJANGO_SUPERUSER_USERNAME: "admin"
       DJANGO_SUPERUSER_PASSWORD: "1122"
       DJANGO_SUPERUSER_EMAIL: "name@gmail.com"
+      PYTHONUNBUFFERED: 1
     ports:
       - "8088:8088"
-
   db:
     container_name: project-name-db
     hostname: project-name-db
-    image: flakooo/myprojects:project-name-db
+    image: project-name-db
     restart: always
     volumes:
       - "db_data:/var/lib/mysql"

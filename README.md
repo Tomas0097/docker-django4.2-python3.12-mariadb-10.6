@@ -5,11 +5,11 @@
   - Remove the **.git** file.
   - Rename the repository folder and all of its containing folders and text occurrences of the variables "project-name" and "project_name" to match the name of your project.
   - Remove the text in the **README.md** file.
-  - Build/Pull all images in **/dev** folder.
-  - Navigate to the root folder of repository and run the Make scripts in the following order:
+  - Navigate to the root folder of repository and initialize project:
+    - `make setup_project`
+  - Start app:
     - `make up`
-    - `make prepare_database`
-    - `make migrate`
-    - `make create_default_superuser`
-  - Go to http://127.0.0.1:8088/admin/ and test if the Django app is running.
+  - Go to http://localhost:8088/admin and test if the Django app is running.
+  - Stop app:
+    - `make down`
 - If everything is working correctly, initialize a new Git repository and push it to the remote server.
