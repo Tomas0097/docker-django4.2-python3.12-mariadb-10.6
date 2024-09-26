@@ -10,8 +10,8 @@ default:
 make setup_project:
 	docker build -t project-name-app -f docker/app/Dockerfile .
 	docker build -t project-name-db -f docker/db/Dockerfile .
-	cd docker/ && docker-compose up -d db
-	cd docker/ && docker-compose up -d app
+	cd docker/ && docker compose up -d db
+	cd docker/ && docker compose up -d app
 	make prepare_database
 	@echo "Waiting 20 seconds for database in db container to be connectible..."
 	sleep 20
@@ -51,7 +51,7 @@ manage:
 	$(manage_command) $(command)
 
 up:
-	cd docker/ && docker-compose up
+	cd docker/ && docker compose up
 
 down:
-	cd docker/ && docker-compose down
+	cd docker/ && docker compose down
