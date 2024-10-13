@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'project_name.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DB_HOST = ENV.str("DB_HOST", "localhost")
+DB_HOST = ENV.str("DB_HOST", "project-name-db")
 DB_PORT = ENV.str("DB_PORT", "")
 DB_NAME = ENV.str("DB_NAME", "project_name")
 DB_USER = ENV.str("DB_USER", "project_name")

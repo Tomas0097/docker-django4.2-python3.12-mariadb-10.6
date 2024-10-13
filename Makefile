@@ -36,7 +36,7 @@ create_default_superuser:
 	$(manage_command) createsuperuser --noinput
 
 pip_install:
-	docker exec -it project-name-app /pip.sh
+	docker exec -it project-name-app docker/app/pip.sh
 
 app_bash:
 	docker exec -it project-name-app bash

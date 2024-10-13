@@ -1,0 +1,18 @@
+services:
+  app-dev:
+    container_name: project-name-app-dev
+    hostname: project-name-app-dev
+    image: project-name-app
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - "..:/opt/project-name"
+    command: /bin/sh -c "while sleep 1000; do :; done"  # Infinite loop to avoid stopping the container.
+    environment:
+      DB_HOST: "project-name-db"
+      DB_PORT: "3306"
+      DJANGO_SUPERUSER_USERNAME: "admin"
+      DJANGO_SUPERUSER_PASSWORD: "1122"
+      DJANGO_SUPERUSER_EMAIL: "name@gmail.com"
+      PYTHONUNBUFFERED: 1
