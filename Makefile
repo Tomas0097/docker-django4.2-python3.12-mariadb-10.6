@@ -14,7 +14,7 @@ make setup_project:
 	cd docker/ && docker compose up -d app
 	make prepare_database
 	@echo "Waiting 20 seconds for database in db container to be connectible..."
-	sleep 20
+	@sleep 20
 	make migrate
 	make create_default_superuser
 	make down
