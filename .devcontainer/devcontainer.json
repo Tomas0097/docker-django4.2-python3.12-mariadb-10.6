@@ -1,3 +1,5 @@
+// VSCode configuration of dev container for debugging.
+
 {
     "name": "Django app",
     "dockerComposeFile": ["../docker/compose.yml", "docker-compose.extend.yml"],
