@@ -25,9 +25,11 @@ prepare_database:
 
 makemigrations:
 	$(manage_command) makemigrations -n '_' $(options) web
+	docker exec -it project-name-app /fix-privileges.sh /opt/project-name/src/web/migrations
 
 makemigrations_data:
 	$(manage_command) makemigrations -n '_' --empty web
+	docker exec -it project-name-app /fix-privileges.sh /opt/project-name/src/web/migrations
 
 migrate:
 	$(manage_command) migrate $(app) $(migration)
