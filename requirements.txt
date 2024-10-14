@@ -2,3 +2,5 @@ django==4.2
 django-debug-toolbar==4.0.0
 django-environ==0.10.0
 mysqlclient==2.1.1
+pyright==1.1.382
+ruff==0.6.8

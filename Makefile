@@ -38,6 +38,9 @@ create_default_superuser:
 pip_install:
 	docker exec -it project-name-app docker/app/pip.sh
 
+lint:
+	docker exec -it project-name-app /opt/project-name/docker/app/lint.sh
+
 app_bash:
 	docker exec -it project-name-app bash
 
